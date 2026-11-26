@@ -34,3 +34,16 @@ function createPetal() {
 }
 
 setInterval(createPetal, 500);
+
+function showGallery(id){
+
+    document
+        .querySelectorAll(".category")
+        .forEach(category => {
+            category.classList.remove("active");
+        });
+
+    document
+        .getElementById(id)
+        .classList.add("active");
+}
