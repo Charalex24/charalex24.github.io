@@ -74,6 +74,16 @@ h2 {
     text-align:center;
 }
 
+.contact p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact{
+    margin-bottom: 50px;
+}
+
 /*title header*/
 header{
     text-align:center;
@@ -85,7 +95,7 @@ header h1{
     color:var(--pink-dark);
 }
 
-header p{
+p{
     font-size:1.2rem;
     margin:15px 0;
 }
