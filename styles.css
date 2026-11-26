@@ -1,0 +1,152 @@
+:root{
+    --bg: #fff5fa;
+    --card: #ffffff;
+    --pink: #ff8dc7;
+    --pink-dark: #ff69b4;
+    --lavender: #e9d5ff;
+    --text: #5c4258;
+    --shadow: rgba(255, 105, 180, 0.15);
+}
+
+body{
+    background: linear-gradient(
+        135deg,
+        #fff5fa,
+        #ffe4f1,
+        #f3e8ff
+    );
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+}
+
+/*buttons*/
+.btn{
+    background:linear-gradient(
+        135deg,
+        #ff8dc7,
+        #ff69b4
+    );
+    color:white;
+    padding:14px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:600;
+    display:inline-block;
+}
+
+.btn:hover{
+    animation:bounce .5s;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+/*section header*/
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ffb6d9;
+    }
+    50% {
+        text-shadow: 0 0 20px #ff69b4;
+    }
+    100% {
+        text-shadow: 0 0 5px #ffb6d9;
+    }
+}
+
+h2 {
+    animation: glow 2s infinite;
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+/*title header*/
+header{
+    text-align:center;
+    padding:120px 20px;
+}
+
+header h1{
+    font-size:4rem;
+    color:var(--pink-dark);
+}
+
+header p{
+    font-size:1.2rem;
+    margin:15px 0;
+}
+
+/*gallery*/
+#gallery{
+    padding:80px 10%;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.grid img{
+    width:100%;
+    border-radius:12px;
+    transition:0.3s ease;
+    cursor:pointer;
+}
+
+.grid img:hover{
+    transform:scale(1.03);
+}
+
+.category{
+    background:rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    padding:25px;
+    border-radius:25px;
+    margin-bottom:40px;
+    box-shadow:0 8px 25px var(--shadow);
+}
+
+.category h3{
+    color:var(--pink-dark);
+    margin-bottom:20px;
+}
+
+
+
+/*sakura*/
+.sakura {
+    position: fixed;
+    top: -50px;
+    pointer-events: none;
+    z-index: 999;
+    font-size: 24px;
+
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
